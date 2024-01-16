@@ -1,0 +1,50 @@
+<template>
+  <a-layout>
+    <a-layout-header class="header">
+      <div class="header-avatar">
+        <img height="48" src="@/static/avatar.jpg"/>
+      </div>
+      <a-menu
+          v-model:selectedKeys="selectedKeys1"
+          theme="light"
+          mode="horizontal"
+          class="header-menu"
+      >
+        <a-menu-item key="1">前端</a-menu-item>
+        <a-menu-item key="2">后端</a-menu-item>
+        <a-menu-item key="3">其他</a-menu-item>
+      </a-menu>
+    </a-layout-header>
+    <a-layout-content style="padding: 20px">
+      <slot/>
+    </a-layout-content>
+    <a-layout-footer style="text-align: center">
+      Nuxt App By Shieru
+    </a-layout-footer>
+  </a-layout>
+</template>
+<script lang="ts" setup>
+import { ref } from 'vue';
+import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons-vue';
+const selectedKeys1 = ref<string[]>(['2']);
+const selectedKeys2 = ref<string[]>(['1']);
+const openKeys = ref<string[]>(['sub1']);
+</script>
+<style scoped lang="less">
+.header{
+  display: flex;
+  padding: 0 10px;
+  background: linear-gradient(288deg,#72c6ef,#004e8f);
+  height: 60px;
+
+
+  .header-avatar{
+    align-items: center;
+    padding: 6px 10px 0 0 ;
+  }
+
+  .header-menu{
+    height: 60px;
+  }
+}
+</style>

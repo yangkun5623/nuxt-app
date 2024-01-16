@@ -5,6 +5,7 @@ export default defineNuxtConfig({
   devServer: {
     port: 3333,
   },
-
-
+  build: {
+    transpile: [/echarts/]
+  }
 })
