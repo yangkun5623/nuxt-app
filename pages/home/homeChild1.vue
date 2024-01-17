@@ -7,9 +7,14 @@ useFetch(window?.location?.origin + '/md/Git安装配置.md').then((e) => {
 </script>
 
 <template>
-  <v3-md-editor :content="content"/>
+  <div class="content">
+    <v3-md-editor  :content="content"/>
+  </div>
 </template>
 
 <style scoped>
-
+.content{
+  margin: 0 auto;
+  width: 800px;
+}
 </style>
