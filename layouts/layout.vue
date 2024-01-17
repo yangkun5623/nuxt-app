@@ -1,6 +1,6 @@
 <template>
-  <a-layout>
-    <a-layout-header class="header">
+  <a-layout style="height: 100%">
+    <a-layout-header class="header" :style="{position: 'fixed', zIndex: 1, width: '100%'}">
       <div class="header-avatar">
         <img height="48" src="@/static/avatar.jpg"/>
       </div>
@@ -15,12 +15,12 @@
         <a-menu-item key="3">其他</a-menu-item>
       </a-menu>
     </a-layout-header>
-    <a-layout-content style="padding: 20px">
+    <a-layout-content class="beautifyScrollbar" :style="{padding: '10px', height: ' calc(100% - 60px)',overflowY: 'auto', marginTop: '60px'}">
       <slot/>
+      <a-layout-footer style="text-align: center">
+        Nuxt App By Shieru
+      </a-layout-footer>
     </a-layout-content>
-    <a-layout-footer style="text-align: center">
-      Nuxt App By Shieru
-    </a-layout-footer>
   </a-layout>
 </template>
 <script lang="ts" setup>
@@ -34,7 +34,7 @@ const openKeys = ref<string[]>(['sub1']);
 .header{
   display: flex;
   padding: 0 10px;
-  background: linear-gradient(288deg,#72c6ef,#004e8f);
+  background: white;
   height: 60px;
 
 

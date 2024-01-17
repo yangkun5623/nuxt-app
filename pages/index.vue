@@ -8,7 +8,7 @@ import { ref } from 'vue';
 
 setTimeout(() => {
   navigateTo({
-    name: 'home'
+    path: '/home/homeChild1'
   })
 },3000)
 const option = ref({
@@ -30,7 +30,7 @@ const option = ref({
         },
         keyframeAnimation: {
           duration: 3200,
-          loop: true,
+          loop: false,
           keyframes: [
             {
               percent: 0.5,

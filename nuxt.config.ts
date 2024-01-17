@@ -7,5 +7,6 @@ export default defineNuxtConfig({
   },
   build: {
     transpile: [/echarts/]
-  }
+  },
+  css: ['/assets/css/index.css', '/assets/css/common.less'],
 })

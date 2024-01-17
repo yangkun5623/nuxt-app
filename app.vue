@@ -10,11 +10,5 @@ useHead({
       content: 'Best starter for Nuxt 3 and TypeScript'
     }
   ],
-  bodyAttrs: {
-    class: 'test'
-  },
-  script: [{
-    innerHTML: 'console.log("Hello from head script!")',
-  }]
 })
 </script>
